@@ -1,0 +1,64 @@
+/* STEP 10 */
+/* Style the page */
+
+* {
+  box-sizing: border-box; /* given code from springboard */
+}
+
+/* Add a linear-gradient CSS styling to the page which matches the mockup */
+body {
+  background: rgb(253,243,29);
+  background: linear-gradient(90deg, rgba(253,243,29,1) 0%, rgba(255,97,0,1) 100%); /* linear-gradient matching assignment example */
+  display: flex; /* creates a flexbox */
+  justify-content: center; /* centers content horizontally */
+  align-items: center; /* centers content vertically */
+  height: 100vh; /* ensures the body takes up viewport height */
+  margin: 0;
+}
+
+input {
+  border: 1px solid #FF5500; /* adds border to input */
+  outline: none; /* removes default outline */
+}
+
+.search-container {
+  position: relative;  /* makes sure the search result constainers remain the same length/size as the search box */
+  width: 100%; /* makes sure that the search container takes up 100% of the width */
+  max-width: 400px; /* max width for search box */
+}
+
+.search-container input,
+.search-container .suggestions {
+  width: 100%;   /* makes sure the input takes up it's full width */
+  font-size: 1rem;  /* Ensure the font size is readable */
+}
+
+.search-container input {
+  padding: 10px; /* makes the search box larger and more apealing to the eye */
+  background-color: rgba(255, 255, 255, 0.3); /* gives search container an opaque background color to reveal the color gradient underneath */
+  border-bottom-left-radius: 0; /* removes the bottom left radius for seamless transition */
+  border-bottom-right-radius: 0; /* removes the bottom right radius for seamless transition */
+  outline: none; /* removes the default outline */
+}
+
+.search-container .suggestions {
+  position: absolute; /* keeps search box from moving on the page when there are a lot of suggestions */
+}
+
+ul {
+  padding: 0; /* keeps search result text in line with search box text */
+  margin: 0; /* makes suggestions list flush with search box */
+  list-style-type: none; /* removes bulleit points from list items */
+  background-color: rgba(255, 255, 255, 0.3); /* gives suggestions list same opaque background as the search box */
+}
+
+.suggestion-item {
+  padding: 8px; /* provides better appearance for suggestion items */
+  cursor: pointer; /* preferred cursor option */
+}
+
+.suggestion-item:hover {
+  background-color: #FF5500; /* changes color of suggestion items when cursor hovers over item */
+}
+
+
